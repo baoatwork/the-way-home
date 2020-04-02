@@ -1,6 +1,10 @@
 let a=0;
 let die=0;
 
+function preload(){
+    boy=loadImage("boy.gif");
+}
+
 function setup(){
 createCanvas(windowWidth,windowHeight)
 }
@@ -51,10 +55,12 @@ function home(){
 }
 
 function character(){
-    noStroke()
-    fill("green");
-    yourpos=365+a*55;
-    ellipse(yourpos,55,35,35);
+    //noStroke();
+    //fill("green");
+   let frame = floor(frameCount / 2.5) % 4;
+    yourpos=325+a*55;
+    image(boy, yourpos, 15, 80, 80,frame/2,0,236,354);
+    //ellipse(yourpos,55,35,35);
 }
 
 function dice(){
