@@ -88,71 +88,71 @@ function dice(){
     
 }
 function scene(){
-    if (yourpos==365+1*55){
+    if (yourpos==325+1*55){
         fill("white");
         textSize(50);
         text("scence1", 600, 400);
-    }else if (yourpos==365+2*55){
+    }else if (yourpos==325+2*55){
         fill("white");
         textSize(50);
         text("scence2", 600, 400);
-    }else if (yourpos==365+3*55){
+    }else if (yourpos==325+3*55){
         fill("white");
         textSize(50);
         text("scence3", 600, 400);
-    }else if (yourpos==365+4*55){
+    }else if (yourpos==325+4*55){
         fill("white");
         textSize(50);
         text("scence4", 600, 400);
-    }else if (yourpos==365+5*55){
+    }else if (yourpos==325+5*55){
         fill("white");
         textSize(50);
         text("scence5", 600, 400);
-    }else if (yourpos==365+6*55){
+    }else if (yourpos==325+6*55){
         fill("white");
         textSize(50);
         text("scence6", 600, 400);
-    }else if (yourpos==365+7*55){
+    }else if (yourpos==325+7*55){
         fill("white");
         textSize(50);
         text("scence7", 600, 400);
-    }else if (yourpos==365+8*55){
+    }else if (yourpos==325+8*55){
         fill("white");
         textSize(50);
         text("scence8", 600, 400);
-    }else if (yourpos==365+9*55){
+    }else if (yourpos==325+9*55){
         fill("white");
         textSize(50);
         text("scence9", 600, 400);
-    }else if (yourpos==365+10*55){
+    }else if (yourpos==325+10*55){
         fill("white");
         textSize(50);
         text("scence10", 600, 400);
-    }else if (yourpos==365+11*55){
+    }else if (yourpos==325+11*55){
         fill("white");
         textSize(50);
         text("scence11", 600, 400);
-    }else if (yourpos==365+12*55){
+    }else if (yourpos==325+12*55){
         fill("white");
         textSize(50);
         text("scence12", 600, 400);
-    }else if (yourpos==365+13*55){
+    }else if (yourpos==325+13*55){
         fill("white");
         textSize(50);
         text("scence13", 600, 400);        
-    }else if (yourpos==365+14*55){
+    }else if (yourpos==325+14*55){
         fill("white");
         textSize(50);
         text("scence14", 600, 400);
-    }else if (yourpos==365+15*55){
+    }else if (yourpos==325+15*55){
         fill("white");
         textSize(50);
         text("scence15", 600, 400);
-    }else if (yourpos==365+16*55){
+    }else if (yourpos==325+16*55){
         fill("white");
         textSize(50);
         text("scence16", 600, 400);
-    }else if (yourpos==365+17*55){
+    }else if (yourpos==325+17*55){
         fill("white");
         textSize(50);
         text("scence17", 600, 400);
