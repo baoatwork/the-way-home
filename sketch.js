@@ -17,6 +17,15 @@ function draw(){
 
 function threeEnergy(){
     noStroke();
+
+    fill("white");
+    textSize(15);
+    text("Energy", 60, 25);
+    text("Power", 60, 55);
+    text("Money", 60, 85);
+
+
+
     fill("pink");
     rect(120,20,180,15);
     fill("blue");
