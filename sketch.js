@@ -60,6 +60,15 @@ function draw(){
 
 function threeEnergy(){
     noStroke();
+
+    fill("white");
+    textSize(15);
+    text("Energy", 60, 25);
+    text("Power", 60, 55);
+    text("Money", 60, 85);
+
+
+
     fill("pink");
     rect(120,20,180,15);
     fill("blue");
@@ -86,8 +95,8 @@ function home(){
 
 //coordinate of the character
 function myCoordinate(){
-    
-    
+
+
     yourpos=365+a*55;
    image(coordinate,yourpos-20,myCoordinateY(),100,100);
 }
@@ -109,7 +118,7 @@ function dice(){
         fill("black");
         textSize(50);
         text("2", 1300, 760);
-    } 
+    }
     else if(die==3){
         fill("black");
         textSize(50);
@@ -119,7 +128,7 @@ function dice(){
         textSize(46);
         text("Die", 1280, 760);
     }
-    
+
 }
 function scene(){
     // if (yourpos==365+1*55){
@@ -173,7 +182,7 @@ function scene(){
     // }else if (yourpos==365+13*55){
     //     fill("white");
     //     textSize(50);
-    //     text("scence13", 600, 400);        
+    //     text("scence13", 600, 400);
     // }else if (yourpos==365+14*55){
     //     fill("white");
     //     textSize(50);
