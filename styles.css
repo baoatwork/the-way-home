@@ -1,4 +1,12 @@
 body {
     margin: 0;
+    background-color:#FCFAF2;
+
+    
+}
+
+canvas{
+    border: 5px double #554236;
+    border-radius:2%;
 }
 
