@@ -33,6 +33,8 @@ function setup(){
 
     noStroke();
 
+
+    userStartAudio();
     forest.loop();
 
 }
