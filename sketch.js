@@ -14,15 +14,23 @@ function centerCanvas(){
 function preload(){
     forest = loadSound("resource/sound/forest.mp3");
     river = loadSound("resource/sound/river.mp3");
-    flowersea = loadSound("resource/sound/flowersea.mp3");
+    village = loadSound("resource/sound/village.mp3");
     grassland = loadSound("resource/sound/grassland.mp3");
     volcano = loadSound("resource/sound/volcano.mp3");
 
     forestbg = loadImage("resource/pic/forestbg.png");
+    villagebg = loadImage("resource/pic/villagebg.png");
+    riverbg = loadImage("resource/pic/riverbg.png");
+    volcanobg = loadImage("resource/pic/volcanobg.png");
+    grasslandbg = loadImage("resource/pic/grasslandbg.png");
+
     coordinate = loadImage("resource/pic/coordinate.png");
 
     headIcon = loadImage("resource/pic/head.png");
     bodyIcon = loadImage("resource/pic/body.png");
+
+    chatFont = loadFont('resource/fonts/ComicNeue-Regular.ttf');
+    nameFont = loadFont('resource/fonts/ComicNeue-Bold.ttf');
 }
 
 
@@ -35,7 +43,7 @@ function setup(){
 
 
     userStartAudio();
-    forest.loop();
+    village.loop();
 
 }
 
@@ -43,8 +51,9 @@ function draw(){
     //background picture
     background(myBg());
 
-    fill(28,28,28,220);
-    rect(200,400,800,180);
+    chatBox();
+    rect(200,400,800,180,10);
+    speakerName();
 
     image(headIcon,20,20,80,80);
 
@@ -231,10 +240,33 @@ function myBgm(){
 
 //background picture
 function myBg(){
-    return forestbg;
+    return villagebg;
 }
 
 //reset the position of the canvas
 function windowResized(){
     centerCanvas();
+}
+
+//color of the chatbox
+function chatBox(){
+    if (volcano.isPlaying()){
+        fill(50,30,25,150);
+    }else if(grassland.isPlaying()){
+        fill(67,67,67,130);
+    }else if(river.isPlaying()){
+        fill(67,67,67,130);
+    }else if(forest.isPlaying()){
+        fill(28,40,28,150);
+    }else if(village.isPlaying()){
+        fill(50,28,28,150);
+    }
+}
+
+//the speaker's name
+function speakerName(){
+    fill(200,200,200);
+    textFont(nameFont);
+    textSize(30);
+    text("Bai",300,440);
 }
