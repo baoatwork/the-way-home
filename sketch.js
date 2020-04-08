@@ -12,10 +12,18 @@ let readyToGo = false;
 //check if it's someone speaking
 let showBody = true;
 
-
-
-
+//canvas size
 var cnv;
+
+
+//catching flower
+var coins;
+var player;
+var score = 0;
+var spr;
+var anim;
+var anim2;
+let startFlower=0;
 
 // set the canvas at the center of the page
 function centerCanvas(){
@@ -44,6 +52,13 @@ function preload(){
 
     chatFont = loadFont('resource/fonts/ComicNeue-Regular.ttf');
     nameFont = loadFont('resource/fonts/ComicNeue-Bold.ttf');
+
+//catching flower
+    anim = loadAnimation("assets/asterisk_normal0001.png",
+    "assets/asterisk_normal0002.png",
+    "assets/asterisk_normal0003.png");
+    anim2 = loadAnimation("assets/ghost_standing0001.png",
+    "assets/ghost_standing0002.png","assets/ghost_standing0003.png")
 }
 
 
@@ -58,9 +73,32 @@ function setup(){
     userStartAudio();
     volcano.loop();
 
+    //catching flower
+    coins = new Group();
+    coins2 = new Group();
+    for (var i = 0; i < 10; i++) {
+      var c = createSprite(random(100, width-100),random(200, height-100),10, 10);
+      //c.shapeColor = color(255, 255, 0);
+      c.addAnimation("default",anim);
+      coins.add(c);
+    }
+    for (var i = 0; i < 10; i++) {
+      var d = createSprite(random(100, width-100),random(200, height-100),10, 10);
+      //c.shapeColor = color(255, 255, 0);
+      d.addAnimation("default",anim2);
+      coins2.add(d);
+    }
+    //user's block
+    player = createSprite(50, 50, 60, 60);
+    player.shapeColor = color("white");
+
 }
 
 function draw(){
+
+    //find position
+    print(console.log(mouseX,mouseY));
+
     //background picture
     background(myBg());
 
@@ -88,7 +126,10 @@ function draw(){
     fill(250,250,250);
     rect(1050,450,100,100);
 
-    
+    //catching flower
+
+
+
 }
 
 function threeEnergy(){
@@ -121,7 +162,7 @@ function step(){
 }
 
 function home(){
-    
+
     fill("pink");
     rect(1120,30,70,70);
 }
@@ -165,7 +206,75 @@ function dice(){
 
 }
 function scene(){
-
+    if (yourpos==330+0*45){
+        catchingFlower();
+    }
+    else{
+        fill("white");
+         textSize(50);
+         text("scence2", 600, 400);
+     }
+     //else if (yourpos==365+3*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence3", 600, 400);
+    // }else if (yourpos==365+4*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence4", 600, 400);
+    // }else if (yourpos==365+5*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence5", 600, 400);
+    // }else if (yourpos==365+6*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence6", 600, 400);
+    // }else if (yourpos==365+7*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence7", 600, 400);
+    // }else if (yourpos==365+8*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence8", 600, 400);
+    // }else if (yourpos==365+9*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence9", 600, 400);
+    // }else if (yourpos==365+10*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence10", 600, 400);
+    // }else if (yourpos==365+11*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence11", 600, 400);
+    // }else if (yourpos==365+12*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence12", 600, 400);
+    // }else if (yourpos==365+13*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence13", 600, 400);
+    // }else if (yourpos==365+14*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence14", 600, 400);
+    // }else if (yourpos==365+15*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence15", 600, 400);
+    // }else if (yourpos==365+16*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence16", 600, 400);
+    // }else if (yourpos==365+17*55){
+    //     fill("white");
+    //     textSize(50);
+    //     text("scence17", 600, 400);
+    // }
 }
 
 
@@ -225,7 +334,7 @@ function mousePressed() {
                     currentContent1 = "(Throw the dice to move)";
                     currentContent2 = "";
                 }
-                
+
             }else if (currentScene == 1 || currentScene == 2 || currentScene == 3){
                 if (currentChat == 0){
                     currentChat ++;
@@ -247,10 +356,10 @@ function mousePressed() {
                     currentContent1 = "(Do a Game)";
                 }
             }
-            
+
         }
     }
-    
+
     //for the dice
     if (mouseX >= 1050 && mouseX <= 1150 && mouseY >= 450 && mouseY <= 550){
         if (readyToGo == true){
@@ -270,7 +379,7 @@ function mousePressed() {
                     die=3;
                     currentScene=currentScene+3;
                 }
-            } 
+            }
 
             if (currentScene == 1 || currentScene == 2 || currentScene == 3){
                 showBody = true;
@@ -295,8 +404,9 @@ function mousePressed() {
     }
 
 
-    
+
   }
+
 
 
 
@@ -318,7 +428,7 @@ function myBg(){
     }else if(village.isPlaying()){
         return villagebg;
     }
-    
+
 }
 
 //reset the position of the canvas
@@ -351,11 +461,10 @@ function speakerName(){
 
         image(bodyIcon,20,300,280,280);
     }
-    
 
-    
+
+
 }
-
 
 //the current showing chat content
 function chatContent(){
@@ -365,3 +474,38 @@ function chatContent(){
     text(currentContent1,350,480);
     text(currentContent2,350,520);
 }
+
+
+
+//catching flower
+function catchingFlower(){
+    player.velocity.x = (mouseX-player.position.x)*0.1;
+    player.velocity.y = (mouseY-player.position.y)*0.1;
+    player.overlap(coins, getCoin);
+    player.overlap(coins2,gameOver);
+    drawSprites();
+    fill(255);
+    noStroke();
+    textSize(72);
+    textAlign(CENTER, CENTER);
+    if (coins.length > 0) {
+      text(score, width/2, height/2);
+    }
+    else {
+      text("you win!", width/2, height/2);
+    }
+}
+
+function getCoin(player, coin) {
+    coin.remove();
+    score += 1;
+  }
+
+  function gameOver(){
+    noStroke();
+    textSize(72);
+    textAlign(CENTER, CENTER);
+    fill("red");
+    text("GAME OVER",width/2, height/2);
+    noLoop();
+  }
