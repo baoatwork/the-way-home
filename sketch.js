@@ -1,5 +1,18 @@
-let a=0;
+let currentScene=0;
+let currentChat = 0;
 let die=0;
+
+
+let currentContent1 ="hahaha";
+let currentContent2 ="This is line 2";
+
+//check if it's time to throw the dice
+let readyToGo = true;
+
+//check if it's someone speaking
+let showBody = true;
+
+
 
 
 var cnv;
@@ -43,7 +56,7 @@ function setup(){
 
 
     userStartAudio();
-    village.loop();
+    forest.loop();
 
 }
 
@@ -51,9 +64,15 @@ function draw(){
     //background picture
     background(myBg());
 
+    //chatbox
     chatBox();
     rect(200,400,800,180,10);
+
+    //the name & image of the character
     speakerName();
+
+    //the text content
+    chatContent();
 
     image(headIcon,20,20,80,80);
 
@@ -66,7 +85,10 @@ function draw(){
     dice();
     scene();
 
-    image(bodyIcon,20,300,280,280);
+    fill(250,250,250);
+    rect(1050,450,100,100);
+
+    
 }
 
 function threeEnergy(){
@@ -93,28 +115,29 @@ function step(){
     while(i<=17){
     noStroke();
     fill("white");
-    quad(280+i*55,90,330+i*55,90,345+i*55,50,295+i*55,50);
+    quad(280+i*45,90,320+i*45,90,345+i*45,50,305+i*45,50);
     i=i+1;
     }
 }
 
 function home(){
-    noStroke();
+    
     fill("pink");
-    rect(1290,30,70,70);
+    rect(1120,30,70,70);
 }
+
 
 //coordinate of the character
 function myCoordinate(){
 
 
-    yourpos=365+a*55;
+    yourpos=330+currentScene*45;
    image(coordinate,yourpos-20,myCoordinateY(),100,100);
 }
 
 function myCoordinateY(){
 
-    return -20 + floor(frameCount/7)%3 *10;
+    return -10 + floor(frameCount/9)%3 *5;
 }
 
 function dice(){
@@ -213,22 +236,41 @@ function scene(){
     // }
 }
 
+
+//mousePressed inteaction
 function mousePressed() {
-    var randomValue = random();
-    if (yourpos<=1260){
-        if(randomValue < 0.3333){
-         die=1;
-         a=a+1;
+
+    //For the update of the chatbox
+    if (mouseX >= 200 && mouseX <= 1000 && mouseY >= 400 && mouseY <= 580){
+        if (readyToGo == true){
+            currentContent1 = "hello world!"
+        }
     }
-        else if(randomValue < 0.6666 && randomValue>=0.3333){
-        die=2;
-        a=a+2;
+    
+    //for the dice
+    if (mouseX >= 1050 && mouseX <= 1150 && mouseY >= 450 && mouseY <= 550){
+        if (readyToGo == true){
+            //readyToGo = false;
+            var randomValue = random();
+            if (yourpos<=1260){
+                    if(randomValue < 0.3333){
+                    die=1;
+                    currentScene=currentScene+1;
+                }
+                    else if(randomValue < 0.6666 && randomValue>=0.3333){
+                    die=2;
+                    currentScene=currentScene+2;
+                }
+                    else{
+                    die=3;
+                    currentScene=currentScene+3;
+                }
+            } 
+        }
     }
-        else{
-        die=3;
-        a=a+3;
-    }
-}
+
+
+    
   }
 
 
@@ -240,7 +282,7 @@ function myBgm(){
 
 //background picture
 function myBg(){
-    return villagebg;
+    return forestbg;
 }
 
 //reset the position of the canvas
@@ -263,10 +305,27 @@ function chatBox(){
     }
 }
 
-//the speaker's name
+//the speaker's name & body image
 function speakerName(){
+    if (showBody == true){
+        fill(200,200,200);
+        textFont(nameFont);
+        textSize(30);
+        text("Bai",300,440);
+
+        image(bodyIcon,20,300,280,280);
+    }
+    
+
+    
+}
+
+
+//the current showing chat content
+function chatContent(){
     fill(200,200,200);
-    textFont(nameFont);
-    textSize(30);
-    text("Bai",300,440);
+    textFont(chatFont);
+    textSize(25);
+    text(currentContent1,350,480);
+    text(currentContent2,350,520);
 }
