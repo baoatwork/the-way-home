@@ -3,11 +3,11 @@ let currentChat = 0;
 let die=0;
 
 
-let currentContent1 ="hahaha";
-let currentContent2 ="This is line 2";
+let currentContent1 ="Umm...";
+let currentContent2 ="";
 
 //check if it's time to throw the dice
-let readyToGo = true;
+let readyToGo = false;
 
 //check if it's someone speaking
 let showBody = true;
@@ -56,7 +56,7 @@ function setup(){
 
 
     userStartAudio();
-    forest.loop();
+    volcano.loop();
 
 }
 
@@ -165,75 +165,7 @@ function dice(){
 
 }
 function scene(){
-    // if (yourpos==365+1*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence1", 600, 400);
-    // }else if (yourpos==365+2*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence2", 600, 400);
-    // }else if (yourpos==365+3*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence3", 600, 400);
-    // }else if (yourpos==365+4*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence4", 600, 400);
-    // }else if (yourpos==365+5*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence5", 600, 400);
-    // }else if (yourpos==365+6*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence6", 600, 400);
-    // }else if (yourpos==365+7*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence7", 600, 400);
-    // }else if (yourpos==365+8*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence8", 600, 400);
-    // }else if (yourpos==365+9*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence9", 600, 400);
-    // }else if (yourpos==365+10*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence10", 600, 400);
-    // }else if (yourpos==365+11*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence11", 600, 400);
-    // }else if (yourpos==365+12*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence12", 600, 400);
-    // }else if (yourpos==365+13*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence13", 600, 400);
-    // }else if (yourpos==365+14*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence14", 600, 400);
-    // }else if (yourpos==365+15*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence15", 600, 400);
-    // }else if (yourpos==365+16*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence16", 600, 400);
-    // }else if (yourpos==365+17*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence17", 600, 400);
-    // }
+
 }
 
 
@@ -242,15 +174,88 @@ function mousePressed() {
 
     //For the update of the chatbox
     if (mouseX >= 200 && mouseX <= 1000 && mouseY >= 400 && mouseY <= 580){
-        if (readyToGo == true){
-            currentContent1 = "hello world!"
+        if (readyToGo == false){
+            if (currentScene == 0){
+                if (currentChat == 0){
+                    currentChat ++;
+                    currentContent1 = "Where ... am I?";
+                    currentContent2 = "";
+                }else if(currentChat == 1){
+                    currentChat ++;
+                    showBody = false;
+                    currentContent1 = "This morning, when you open your eyes, you find";
+                    currentContent2 = "yourself somewhere unfamiliar.";
+                }else if(currentChat == 2){
+                    currentChat ++;
+                    currentContent1 = "The wind is blowing so hard that you can't even";
+                    currentContent2 = "stand up.";
+                }else if(currentChat == 3){
+                    currentChat ++;
+                    showBody = true;
+                    currentContent1 = "The wind can't send me here... can it?";
+                    currentContent2 = "";
+                }else if(currentChat == 4){
+                    currentChat ++;
+                    showBody = false;
+                    currentContent1 = "Strangely, you don’t panic at all.";
+                    currentContent2 = "";
+                }else if(currentChat == 5){
+                    currentChat ++;
+                    currentContent1 = "Although you don’t know what is going on, one thing";
+                    currentContent2 = "is sure: you need to go home.";
+                }else if(currentChat == 6){
+                    currentChat ++;
+                    showBody = true;
+                    currentContent1 = "Which direction should I go?";
+                    currentContent2 = "Ah! Morning stars!";
+                }else if(currentChat == 7){
+                    currentChat ++;
+                    showBody = false;
+                    currentContent1 = "According to the morning stars, you are now";
+                    currentContent2 = "somewhere far west from your home.";
+                }else if(currentChat == 8){
+                    currentChat ++;
+                    showBody = true;
+                    currentContent1 = "Then I need to go that way… Here we go!";
+                    currentContent2 = "";
+                }else if(currentChat == 9){
+                    currentChat ++;
+                    showBody = false;
+                    readyToGo = true;
+                    currentContent1 = "(Throw the dice to move)";
+                    currentContent2 = "";
+                }
+                
+            }else if (currentScene == 1 || currentScene == 2 || currentScene == 3){
+                if (currentChat == 0){
+                    currentChat ++;
+                    showBody = false;
+                    readyToGo = true;
+                    currentContent1 = "(Throw the dice to move)";
+                }
+            }else if (currentScene == 4 || currentScene == 5 || currentScene == 6){
+                if (currentChat == 0){
+                    currentChat ++;
+                    showBody = false;
+                    readyToGo = true;
+                    currentContent1 = "(Throw the dice to move)";
+                }
+            }else if (currentScene == 7 || currentScene == 8 || currentScene == 9){
+                if (currentChat == 0){
+                    currentChat ++;
+                    showBody = false;
+                    currentContent1 = "(Do a Game)";
+                }
+            }
+            
         }
     }
     
     //for the dice
     if (mouseX >= 1050 && mouseX <= 1150 && mouseY >= 450 && mouseY <= 550){
         if (readyToGo == true){
-            //readyToGo = false;
+            readyToGo = false;
+            currentChat = 0;
             var randomValue = random();
             if (yourpos<=1260){
                     if(randomValue < 0.3333){
@@ -266,6 +271,26 @@ function mousePressed() {
                     currentScene=currentScene+3;
                 }
             } 
+
+            if (currentScene == 1 || currentScene == 2 || currentScene == 3){
+                showBody = true;
+                currentContent1 = "I just noticed that this place looks cool."
+            }if (currentScene == 4 || currentScene == 5 || currentScene == 6){
+                if (volcano.isPlaying() == true){
+                    volcano.stop();
+                    grassland.loop();
+                }
+                showBody = true;
+                currentContent1 = "Finally I can see some plants!"
+            }if (currentScene == 7 || currentScene == 8 || currentScene == 9){
+                if (grassland.isPlaying() == true){
+                    grassland.stop();
+                    forest.loop();
+                }
+                showBody = true;
+                currentContent1 = "Finally I can see more plants!"
+            }
+
         }
     }
 
@@ -282,7 +307,18 @@ function myBgm(){
 
 //background picture
 function myBg(){
-    return forestbg;
+    if (volcano.isPlaying()){
+        return volcanobg;
+    }else if(grassland.isPlaying()){
+        return grasslandbg;
+    }else if(river.isPlaying()){
+        return riverbg;
+    }else if(forest.isPlaying()){
+        return forestbg;
+    }else if(village.isPlaying()){
+        return villagebg;
+    }
+    
 }
 
 //reset the position of the canvas
