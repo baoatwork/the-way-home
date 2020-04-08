@@ -6,6 +6,9 @@ let die=0;
 let currentContent1 ="Umm...";
 let currentContent2 ="";
 
+//check if it's time to play the catching flower game
+let playFlower = false;
+
 //check if it's time to throw the dice
 let readyToGo = false;
 
@@ -97,7 +100,7 @@ function setup(){
 function draw(){
 
     //find position
-    print(console.log(mouseX,mouseY));
+    console.log(mouseX,mouseY);
 
     //background picture
     background(myBg());
@@ -121,13 +124,14 @@ function draw(){
     //coordinate of the character
     myCoordinate();
     dice();
-    scene();
 
     fill(250,250,250);
     rect(1050,450,100,100);
 
     //catching flower
-
+    if (playFlower == true){
+        catchingFlower();
+    }
 
 
 }
@@ -205,77 +209,7 @@ function dice(){
     }
 
 }
-function scene(){
-    if (yourpos==330+0*45){
-        catchingFlower();
-    }
-    else{
-        fill("white");
-         textSize(50);
-         text("scence2", 600, 400);
-     }
-     //else if (yourpos==365+3*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence3", 600, 400);
-    // }else if (yourpos==365+4*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence4", 600, 400);
-    // }else if (yourpos==365+5*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence5", 600, 400);
-    // }else if (yourpos==365+6*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence6", 600, 400);
-    // }else if (yourpos==365+7*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence7", 600, 400);
-    // }else if (yourpos==365+8*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence8", 600, 400);
-    // }else if (yourpos==365+9*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence9", 600, 400);
-    // }else if (yourpos==365+10*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence10", 600, 400);
-    // }else if (yourpos==365+11*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence11", 600, 400);
-    // }else if (yourpos==365+12*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence12", 600, 400);
-    // }else if (yourpos==365+13*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence13", 600, 400);
-    // }else if (yourpos==365+14*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence14", 600, 400);
-    // }else if (yourpos==365+15*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence15", 600, 400);
-    // }else if (yourpos==365+16*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence16", 600, 400);
-    // }else if (yourpos==365+17*55){
-    //     fill("white");
-    //     textSize(50);
-    //     text("scence17", 600, 400);
-    // }
-}
+
 
 
 //mousePressed inteaction
@@ -353,6 +287,7 @@ function mousePressed() {
                 if (currentChat == 0){
                     currentChat ++;
                     showBody = false;
+                    playFlower = true;
                     currentContent1 = "(Do a Game)";
                 }
             }
@@ -488,11 +423,14 @@ function catchingFlower(){
     noStroke();
     textSize(72);
     textAlign(CENTER, CENTER);
+    
     if (coins.length > 0) {
-      text(score, width/2, height/2);
+        currentContent2 = "Your score:" + score;
     }
     else {
-      text("you win!", width/2, height/2);
+        playFlower = false;
+        currentContent1 = "You win!"
+        currentContent2 = "";
     }
 }
 
@@ -502,7 +440,7 @@ function getCoin(player, coin) {
   }
 
   function gameOver(){
-    noStroke();
+    
     textSize(72);
     textAlign(CENTER, CENTER);
     fill("red");
