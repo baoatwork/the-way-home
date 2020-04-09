@@ -555,7 +555,7 @@ textStuff =[
             "someonespeaking": false,
             "whospeaking": " "
         }
-    ]
+    ],[],[],[],[]
 ]
 // set the canvas at the center of the page
 function centerCanvas(){
@@ -822,21 +822,8 @@ function mousePressed() {
                     volcano.stop();
                     forest.loop();
                 }
-            }else if (currentScene == 4 || currentScene == 5 || currentScene == 6){
-                if (currentChat == 0){
-                    currentChat ++;
-                    showBody = false;
-                    readyToGo = true;
-                    currentContent1 = "(Throw the dice to move)";
-                }
-            }else if (currentScene == 7 || currentScene == 8 || currentScene == 9){
-                if (currentChat == 0){
-                    currentChat ++;
-                    showBody = false;
-                    playFlower = true;
-                    currentContent1 = "(Do a Game)";
-                }
             }
+            
 
         }
     }
@@ -879,21 +866,7 @@ function mousePressed() {
             currentContent1 = nowStuff.line1;
             currentContent2 = nowStuff.line2;
             
-            if (currentScene == 4 || currentScene == 5 || currentScene == 6){
-                if (volcano.isPlaying() == true){
-                    volcano.stop();
-                    grassland.loop();
-                }
-                showBody = true;
-                currentContent1 = "Finally I can see some plants!"
-            }if (currentScene == 7 || currentScene == 8 || currentScene == 9){
-                if (grassland.isPlaying() == true){
-                    grassland.stop();
-                    forest.loop();
-                }
-                showBody = true;
-                currentContent1 = "Finally I can see more plants!"
-            }
+            
 
         }
     }
