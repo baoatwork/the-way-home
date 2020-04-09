@@ -94,6 +94,8 @@ function setup(){
     //user's block
     player = createSprite(50, 50, 60, 60);
     player.shapeColor = color("white");
+    player.position.x = 1200;
+    player.position.y = 600;
 
 }
 
@@ -414,10 +416,8 @@ function chatContent(){
 
 //catching flower
 function catchingFlower(){
-    // player.velocity.x = (mouseX-player.position.x)*0.1;
-    // player.velocity.y = (mouseY-player.position.y)*0.1;
-    player.position.x = mouseX;
-    player.position.y = mouseY;
+    player.velocity.x = (mouseX-player.position.x)*0.1;
+    player.velocity.y = (mouseY-player.position.y)*0.1;
     player.overlap(coins, getCoin);
     player.overlap(coins2,gameOver);
     drawSprites();
