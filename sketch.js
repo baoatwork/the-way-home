@@ -5,6 +5,8 @@ let die=0;
 
 let currentContent1 ="Umm...";
 let currentContent2 ="";
+//check if game is over
+let stillPlaying = true;
 
 //check if it's time to play the catching flower game
 let playFlower = false;
@@ -41,6 +43,8 @@ function preload(){
     village = loadSound("resource/sound/village.mp3");
     grassland = loadSound("resource/sound/grassland.mp3");
     volcano = loadSound("resource/sound/volcano.mp3");
+    failure = loadSound("resource/sound/gameover.mp3");
+
 
     forestbg = loadImage("resource/pic/forestbg.png");
     villagebg = loadImage("resource/pic/villagebg.png");
@@ -100,8 +104,8 @@ function setup(){
 }
 
 function draw(){
-
-    //find position
+    if (stillPlaying == true){
+        //find position
     console.log(mouseX,mouseY);
 
     //background picture
@@ -133,6 +137,15 @@ function draw(){
     //catching flower
     if (playFlower == true){
         catchingFlower();
+    }
+    }else{
+        background(28,28,28);
+
+        textSize(72);
+        textAlign(CENTER, CENTER);
+        fill("red");
+        text("GAME OVER",width/2, height/2);
+
     }
 
 
@@ -442,11 +455,13 @@ function getCoin(player, coin) {
   }
 
   function gameOver(){
-    
-    textSize(72);
-    textAlign(CENTER, CENTER);
-    fill("red");
-    text("GAME OVER",width/2, height/2);
-    noLoop();
+    volcano.stop();
+    grassland.stop();
+    forest.stop();
+    river.stop();
+    village.stop();
+
+    failure.loop();
+    stillPlaying = false;
 
   }
