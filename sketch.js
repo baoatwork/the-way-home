@@ -3,6 +3,12 @@ let currentChat = 0;
 let die=0;
 
 
+//the game values
+let energy = 5;
+let knowledge = 5;
+let sanity = 5;
+
+
 let currentContent1 ="Umm...";
 let currentContent2 ="";
 //check if game is over
@@ -151,23 +157,25 @@ function draw(){
 
 }
 
+
+//draw the game value bars
 function threeEnergy(){
-    noStroke();
+    
 
     fill("white");
     textSize(15);
-    text("Energy", 60, 25);
-    text("Power", 60, 55);
-    text("Money", 60, 85);
+    text("Energy", 110, 34);
+    text("Power", 110, 64);
+    text("Money", 110, 94);
 
 
 
     fill("pink");
-    rect(120,20,180,15);
+    rect(165,24,energy * 15,15);
     fill("blue");
-    rect(120,50,180,15);
+    rect(165,54,knowledge * 15,15);
     fill("red");
-    rect(120,80,180,15);
+    rect(165,84,sanity * 15,15);
 }
 
 function step(){
