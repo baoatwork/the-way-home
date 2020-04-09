@@ -11,7 +11,9 @@ let sanity = 5;
 
 let currentContent1 ="Umm...";
 let currentContent2 ="";
-//check if game is over
+
+
+//check if the game is over
 let stillPlaying = true;
 
 //check if it's time to play the catching flower game
@@ -67,11 +69,11 @@ function preload(){
     nameFont = loadFont('resource/fonts/ComicNeue-Bold.ttf');
 
 //catching flower
-    anim = loadAnimation("assets/asterisk_normal0001.png",
-    "assets/asterisk_normal0002.png",
-    "assets/asterisk_normal0003.png");
-    anim2 = loadAnimation("assets/ghost_standing0001.png",
-    "assets/ghost_standing0002.png","assets/ghost_standing0003.png")
+    anim = loadAnimation("resource/assets/asterisk_normal0001.png",
+    "resource/assets/asterisk_normal0002.png",
+    "resource/assets/asterisk_normal0003.png");
+    anim2 = loadAnimation("resource/assets/ghost_standing0001.png",
+    "resource/assets/ghost_standing0002.png","resource/assets/ghost_standing0003.png")
 }
 
 
@@ -104,7 +106,7 @@ function setup(){
     //user's block
     player = createSprite(50, 50, 60, 60);
     player.shapeColor = color("white");
-    player.position.x = 1200;
+    player.position.x = 600;
     player.position.y = 600;
 
 }
@@ -146,6 +148,7 @@ function draw(){
         catchingFlower();
     }
     }else{
+        //game over
         background(28,28,28);
 
         textSize(72);
@@ -166,8 +169,8 @@ function threeEnergy(){
     fill("white");
     textSize(15);
     text("Energy", 110, 34);
-    text("Power", 110, 64);
-    text("Money", 110, 94);
+    text("Wit", 110, 64);
+    text("Sanity", 110, 94);
 
 
 
@@ -471,6 +474,7 @@ function getCoin(player, coin) {
     village.stop();
 
     failure.loop();
+    currentScene =30;
     stillPlaying = false;
 
   }
