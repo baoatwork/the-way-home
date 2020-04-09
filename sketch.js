@@ -414,8 +414,10 @@ function chatContent(){
 
 //catching flower
 function catchingFlower(){
-    player.velocity.x = (mouseX-player.position.x)*0.1;
-    player.velocity.y = (mouseY-player.position.y)*0.1;
+    // player.velocity.x = (mouseX-player.position.x)*0.1;
+    // player.velocity.y = (mouseY-player.position.y)*0.1;
+    player.position.x = mouseX;
+    player.position.y = mouseY;
     player.overlap(coins, getCoin);
     player.overlap(coins2,gameOver);
     drawSprites();
@@ -446,4 +448,5 @@ function getCoin(player, coin) {
     fill("red");
     text("GAME OVER",width/2, height/2);
     noLoop();
+
   }
