@@ -83,13 +83,13 @@ function setup(){
     //catching flower
     coins = new Group();
     coins2 = new Group();
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 7; i++) {
       var c = createSprite(random(100, width-100),random(200, height-100),10, 10);
       //c.shapeColor = color(255, 255, 0);
       c.addAnimation("default",anim);
       coins.add(c);
     }
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 3; i++) {
       var d = createSprite(random(100, width-100),random(200, height-100),10, 10);
       //c.shapeColor = color(255, 255, 0);
       d.addAnimation("default",anim2);
@@ -129,10 +129,11 @@ function draw(){
 
     //coordinate of the character
     myCoordinate();
-    dice();
 
     fill(250,250,250);
     rect(1050,450,100,100);
+
+    dice();
 
     //catching flower
     if (playFlower == true){
