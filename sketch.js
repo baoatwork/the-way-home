@@ -19,6 +19,9 @@ let stillPlaying = true;
 //check if it's time to play the catching flower game
 let playFlower = false;
 
+//check if it's time to make a choice
+let makingChoice = false;
+
 //check if it's time to throw the dice
 let readyToGo = false;
 
@@ -43,6 +46,7 @@ let startFlower=0;
 //open world
 
 let encounterVolcano =0;
+let encounterGrassland = 0;
 
 //the text content
 textStuff =[
@@ -555,7 +559,201 @@ textStuff =[
             "someonespeaking": false,
             "whospeaking": " "
         }
-    ],[],[],[],[]
+    ],
+    [
+        {
+            "line1": "Finally! I am out of that wasteland.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "After climbing over several mountains, green color",
+            "line2": "appears on the ground.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Just in a few minutes, some white dots also appear",
+            "line2": "in sight and gradually become bigger.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Ah! Sheep!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "A flock of sheep are grazing here and there on the",
+            "line2": "hillside.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Although you have no idea where they come from, ",
+            "line2": "seeing living animals does make you feel better.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Wow. I didn't expect this. ",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You come close to one sheep and carefully touch ",
+            "line2": "its hair. It's real.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "I wonder... if those sheep are herded by someone.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You look around, and there is still no one in sight.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Maybe I can wait here for the sheepherd to get some",
+            "line2": "help... Should I stay?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You decide to stay with those sheep. After all, they",
+            "line2": "are cute enough for you to look at.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "As expected, a middle-aged man show up in a while.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Hello! I am Bai. I come from the Pine Village. May I",
+            "line2": "ask what place is this?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "The sheep man looks pretty surprised at first, but in",
+            "line2": "a few seconds, a friendly smile appears on his face.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "I haven't seen a new face in a long time! I am Lee.",
+            "line2": "This is the land of forgotten.",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "Land of forgotten? I have never heard this name.",
+            "line2": "Do you know how can I get home?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You must come from the east world! If you want to",
+            "line2": "go home, you need to get across a river in between.",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "But before reaching the river, you need to make your",
+            "line2": "way through a forest in that direction.",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "Um... Unluckily I don't know much about that area...",
+            "line2": "I haven't been there recently.",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "I live on this grassland with my sheep. ",
+            "line2": "They are cute, aren't they?",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "Yes they surely are. Thank you for your information!",
+            "line2": "By the way, do you have something to... eat?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "After walking for a long time, you do feel hungry. But",
+            "line2": "asking for food still makes you shy.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Haha! Look at me. I should treat my guest better!",
+            "line2": "I have some cheese with me today. Here you are!",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "Thank you! May I do something for you?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You don't need to repay me! I am happy to meet you",
+            "line2": "today.",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "I wish we could talk more, but I need to get my sheep",
+            "line2": "back before dark.",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "Good luck with your journey! ",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Lee"
+        },
+        {
+            "line1": "After saying goodbye, Lee and his sheep leave this",
+            "line2": "hillside soon.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Ha... What a nice guy. And these cheese taste so",
+            "line2": "good. Let's go!",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "(Energy increased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Throw the dice to move)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
+    ]
 ]
 // set the canvas at the center of the page
 function centerCanvas(){
@@ -586,6 +784,10 @@ function preload(){
 
     chatFont = loadFont('resource/fonts/ComicNeue-Regular.ttf');
     nameFont = loadFont('resource/fonts/ComicNeue-Bold.ttf');
+
+    //choices
+    yesAnswer = loadImage("resource/pic/right.png");
+    noAnswer = loadImage("resource/pic/wrong.png");
 
 //catching flower
     myHand = loadImage("resource/pic/hand.png")
@@ -669,6 +871,14 @@ function draw(){
             catchingFlower();
             
         }
+
+        //make choice
+        if (makingChoice == true){
+            image(yesAnswer,yesAnswerX(),yesAnswerY(),yesAnswerSize(),yesAnswerSize());
+            image(noAnswer,noAnswerX(),noAnswerY(),noAnswerSize(),noAnswerSize());
+        }
+
+        
 
     }else{
         //game over
@@ -767,7 +977,7 @@ function mousePressed() {
 
     //For the update of the chatbox
     if (mouseX >= 200 && mouseX <= 1000 && mouseY >= 400 && mouseY <= 580){
-        if (readyToGo == false && playFlower == false){
+        if (readyToGo == false && playFlower == false && makingChoice == false){
             let nowStuff = textStuff[currentScene][currentChat];
                 currentChat ++;
                 showBody = nowStuff.someonespeaking;
@@ -822,6 +1032,15 @@ function mousePressed() {
                     volcano.stop();
                     forest.loop();
                 }
+            }else if(currentScene == 4){
+
+                if (currentChat == 11){
+                    makingChoice = true;
+                }else if(currentChat == 32){
+                    energy = energy + 1;
+                    encounterGrassland ++;
+                    readyToGo = true;
+                }
             }
             
 
@@ -834,6 +1053,7 @@ function mousePressed() {
         if (readyToGo == true){
             readyToGo = false;
             currentChat = 0;
+
             var randomValue = random();
             if (currentScene<=17){
                     if(randomValue < 0.3333){
@@ -851,12 +1071,21 @@ function mousePressed() {
                 //currentScene ++;
             }
 
-            currentChat = 0;
+
             if (currentScene == 2 || currentScene == 3){
                 if (encounterVolcano == 1){
                     currentChat = 11;
                 }else if (encounterVolcano == 2){
                     currentChat = 23;
+                }
+            }else if (currentScene == 4 || currentScene == 5 || currentScene == 6){
+                if (volcano.isPlaying() == true){
+                    volcano.stop();
+                    grassland.loop();
+                }
+
+                if (encounterGrassland >= 1){
+                    currentChat = 3;
                 }
             }
             let nowStuff = textStuff[currentScene][currentChat];
@@ -872,8 +1101,50 @@ function mousePressed() {
     }
 
 
+    //for the choice
+    if (mouseX>= 450 && mouseX <= 530 && mouseY >= 300 && mouseY <= 380){
+
+        if (makingChoice == true){
+        
+
+            let nowStuff = textStuff[currentScene][currentChat];
+            showBody = nowStuff.someonespeaking;
+            currentChat ++;
+            whoSpeaks = nowStuff.whospeaking;
+            currentContent1 = nowStuff.line1;
+            currentContent2 = nowStuff.line2;
+    
+            makingChoice = false;
+        }
+        
+    }
+    
+    
+    if(mouseX>= 650 && mouseX <= 730 && mouseY >= 300 && mouseY <= 380){
+        if (makingChoice == true){
+            if (currentScene == 4){
+                currentChat = 31;
+                readyToGo = true;
+                encounterGrassland ++;
+            }
+
+            let nowStuff = textStuff[currentScene][currentChat];
+            showBody = nowStuff.someonespeaking;
+            currentChat ++;
+            whoSpeaks = nowStuff.whospeaking;
+            currentContent1 = nowStuff.line1;
+            currentContent2 = nowStuff.line2;
+    
+            makingChoice = false;
+        }
+        
+    }
+    
+
 
   }
+
+
 
 
 
@@ -993,4 +1264,55 @@ function getCoin(player, coin) {
   //canvas for the game
 function gameCanvas(){
     image(myCanvas,100,100,1000,300);
+}
+
+
+
+//position of the choice buttons
+function yesAnswerX(){
+    if (mouseX>= 450 && mouseX <= 530 && mouseY >= 300 && mouseY <= 380){
+        return 440;
+    }else{
+        return 450;
+    }
+}
+
+function yesAnswerY(){
+    if (mouseX>= 450 && mouseX <= 530 && mouseY >= 300 && mouseY <= 380){
+        return 290;
+    }else{
+        return 300;
+    }
+}
+
+function yesAnswerSize(){
+    if (mouseX>= 450 && mouseX <= 530 && mouseY >= 300 && mouseY <= 380){
+        return 100;
+    }else{
+        return 80;
+    }
+}
+
+function noAnswerX(){
+    if (mouseX>= 650 && mouseX <= 730 && mouseY >= 300 && mouseY <= 380){
+        return 640;
+    }else{
+        return 650;
+    }
+}
+
+function noAnswerY(){
+    if (mouseX>= 650 && mouseX <= 730 && mouseY >= 300 && mouseY <= 380){
+        return 290;
+    }else{
+        return 300;
+    }
+}
+
+function noAnswerSize(){
+    if (mouseX>= 650 && mouseX <= 730 && mouseY >= 300 && mouseY <= 380){
+        return 100;
+    }else{
+        return 80;
+    }
 }
