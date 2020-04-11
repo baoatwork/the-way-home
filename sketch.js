@@ -48,6 +48,9 @@ let startFlower=0;
 let encounterVolcano =0;
 let encounterGrassland = 0;
 
+
+let worldName = false;
+
 //the text content
 textStuff =[
     [
@@ -897,6 +900,311 @@ textStuff =[
             "someonespeaking": false,
             "whospeaking": " "
         }
+    ],
+    [
+        {
+            "line1": "Finally! I am out of that wasteland.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "After climbing over several mountains, green color",
+            "line2": "appears on the ground.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Suddenly, a voice appears on your left.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Hey! You! The new comer! Come here!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "???"
+        },
+        {
+            "line1": "Who is speaking?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You search around, but can't see anyone in that",
+            "line2": "direction.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Yes! You! Come closer! Help me out of this!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "???"
+        },
+        {
+            "line1": "With curiosity, you move closer to the voice. ",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "After getting closer, you see a black bird in a cage.",
+            "line2": "You then realize the shouting sound comes from it.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "A bird? You can speak?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Don't be silly. I have a name! My name is Gu!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "Sorry. How come you are trapped in this cage?",
+            "line2": "Do you know how I can go home from this place?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "I was searching for food the other day when I got ",
+            "line2": "caught by a greedy hunter.",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "This is the land of Greed. People here keep robbing",
+            "line2": "and hurting other species.",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "Um... You seem to be from the east world...",
+            "line2": "Let's make a deal.",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "You open this cage and let me out,",
+            "line2": "I can lead you out of this land.",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "After all, we both want to go home.",
+            "line2": "What do you think?",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "Well... Let me see...",
+            "line2": "Should I trust him?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Ok. I believe you. Please carry out your promise",
+            "line2": "then.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You open the cage. However, Gu doesn't stay but",
+            "line2": "scratch you and then fly away instead.",
+            "someonespeaking": false,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "Haha! Stuipid guy! I am a great actor but I don't have ",
+            "line2": "time to waste on you. Bye bye!",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "Gu soon disappears. In the end, you don't get help.",
+            "line2": "What's worse, your wound hurts.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "......",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "(Energy decreased, sanity decreased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Throw the dice to move)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "No, I'm not gonna believe you. You are a lier.",
+            "line2": "This place is not the land of Greed.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "And who knows? Maybe you are being punished for ",
+            "line2": "the bad things you did.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Humph! Then there's nothing to say.",
+            "line2": "Good luck with your endless journey.",
+            "someonespeaking": true,
+            "whospeaking": "Gu"
+        },
+        {
+            "line1": "Same to you. Good luck with your endless cage life.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You turn around and set off again, ignoring the loud",
+            "line2": "cursing sound behind.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Wit increased, sanity increased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Throw the dice to move)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "Wow, it is such a nice place,  sort of like a wonderland!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "But…how can I find my way out? It’s such a maze.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Wait...what’s that?!?!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Hi, don’t panic, I am Miranda, a flower fairy. ",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Flower"
+        },
+        {
+            "line1": " I can lead you out...but I have a little request…",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Flower"
+        },
+        {
+            "line1": " I have 7 naughty kids and they are now trapped by",
+            "line2": "5 little ghosts. Can you save them out?",
+            "someonespeaking": true,
+            "whospeaking": "Flower"
+        },
+        {
+            "line1": "Sure, I will try my best.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "GAME: CATCHING FLOWER",
+            "line2": "Rule: move your mouse to “catch” 7 naughty flowers and DO NOT run into those little ghosts!",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line2": " "
+        },
+        {
+            "line2": " ",
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "As you continue walking, more trees show up.",
+            "line2": "Later you realize you have entered a forest.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "This forest is like a maze. You can't find a way out",
+            "line2": "in any case.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "In the end, it seems that you have gone a full circle",
+            "line2": "and back to where you entered the forest.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line2": " "
+        },
+        {
+            "line2": " ",
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "As you continue walking, more trees show up.",
+            "line2": "Later you realize you have entered a forest.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "This forest is like a maze. You can't find a way out",
+            "line2": "in any case.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "In the end, it seems that you have gone a full circle",
+            "line2": "and back to where you entered the forest.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line2": " "
+        },
+        {
+            "line2": " ",
+            "whospeaking": " "
+        }
     ]
 ]
 // set the canvas at the center of the page
@@ -1184,6 +1492,7 @@ function mousePressed() {
                     energy = energy + 1;
                     encounterGrassland ++;
                     readyToGo = true;
+                    worldName = true;
                 }
             }else if(currentScene == 5){
                 if (currentChat == 24){
@@ -1192,19 +1501,48 @@ function mousePressed() {
                     sanity = sanity -1;
                     encounterGrassland ++;
                     readyToGo = true;
+                    worldName = true;
                     
                 }
                 
             }else if(currentScene == 6){
-                if (currentChat == 24){
+                if (currentChat == 18){
                     
-                    knowledge ++;
+                    if (worldName == true){
+                        makingChoice = true;
+                    }
+                    
+                }else if(currentChat == 25){
+                    energy =energy -1;
                     sanity = sanity -1;
                     encounterGrassland ++;
                     readyToGo = true;
-                    
+                }else if(currentChat == 32){
+                    knowledge ++;
+                    sanity ++;
+                    readyToGo = true;
+                    encounterGrassland ++;
                 }
                 
+            }else if(currentScene == 7){
+                if(currentChat == 8){
+                    playFlower = true;
+                }
+                
+            }else if(currentScene == 8){
+                if (currentChat == 3){
+                    
+                    currentScene = 7;
+                    currentChat = 0;
+                    
+                }
+            }else if(currentScene == 9){
+                if (currentChat == 3){
+                    
+                    currentScene = 7;
+                    currentChat = 0;
+                    
+                }
             }
             
 
@@ -1251,7 +1589,16 @@ function mousePressed() {
                 if (encounterGrassland >= 1){
                     currentChat = 2;
                 }
+            }else if (currentScene == 7 || currentScene == 8 || currentScene == 9){
+                if (grassland.isPlaying() == true){
+                    grassland.stop();
+                    forest.loop();
+                }
+
+               
             }
+
+
             let nowStuff = textStuff[currentScene][currentChat];
             showBody = nowStuff.someonespeaking;
             currentChat ++;
@@ -1290,6 +1637,8 @@ function mousePressed() {
                 currentChat = 31;
                 readyToGo = true;
                 encounterGrassland ++;
+            }else if(currentScene == 6){
+                currentChat = 25;
             }
 
             let nowStuff = textStuff[currentScene][currentChat];
