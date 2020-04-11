@@ -753,6 +753,150 @@ textStuff =[
             "someonespeaking": false,
             "whospeaking": " "
         }
+    ],
+    [
+        {
+            "line1": "Finally! I am out of that wasteland.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "After climbing over several mountains, green color",
+            "line2": "appears on the ground.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Keep walking, you hear the sound of singing from",
+            "line2": "the distance.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "It seems like a group of people are singing chrous",
+            "line2": "behind this hill.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "There are some people here! I can ask them for ",
+            "line2": "help!",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "The sound inspires you a lot.",
+            "line2": "You quickly climb up for a better sight.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "You see a large white tent several hunderds meters",
+            "line2": "away. It's moving on the grassland.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "People wearing long suits are singing and dancing",
+            "line2": "around it in a circle, and the lyrics become clear.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Once upon a time, there's a beautiful land~",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "A Girl"
+        },
+        {
+            "line1": "Humans and fairies are the ones live there~",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "A Boy"
+        },
+        {
+            "line1": "When the war came, the darkness clouded the sky~",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "A Lady"
+        },
+        {
+            "line1": "And the Saint Lan lead us to a new world~",
+            "someonespeaking": true,
+            "whospeaking": "A Girl"
+        },
+        {
+            "line1": "That's the origin of the forgotten land~",
+            "someonespeaking": true,
+            "whospeaking": "A Man"
+        },
+        {
+            "line1": "Ah~ The saint Lan lead us to a new world~",
+            "line2": "That's the origin of the forgotten land~",
+            "someonespeaking": true,
+            "whospeaking": "Together"
+        },
+        {
+            "line1": "You can't wait to run towards them. But unexpectedly,",
+            "line2": "you are bounced back by a force when going down.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "What the... ? ",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "There seems to be an invisible air wall in front of you.",
+            "line2": "You tried more times but still can't get through.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Hey! Can you hear me? How can I get through this",
+            "line2": "air wall?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "It seems like they can't hear you. ",
+            "line2": "You have no choice but to see them move away.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Damn...This place is so weird! Is that what they were",
+            "line2": "singing about?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "I need to find a way out.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You turn around and set off again.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Sanity decreased, Wit increased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Throw the dice to move)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
     ]
 ]
 // set the canvas at the center of the page
@@ -1041,6 +1185,26 @@ function mousePressed() {
                     encounterGrassland ++;
                     readyToGo = true;
                 }
+            }else if(currentScene == 5){
+                if (currentChat == 24){
+                    
+                    knowledge ++;
+                    sanity = sanity -1;
+                    encounterGrassland ++;
+                    readyToGo = true;
+                    
+                }
+                
+            }else if(currentScene == 6){
+                if (currentChat == 24){
+                    
+                    knowledge ++;
+                    sanity = sanity -1;
+                    encounterGrassland ++;
+                    readyToGo = true;
+                    
+                }
+                
             }
             
 
@@ -1085,7 +1249,7 @@ function mousePressed() {
                 }
 
                 if (encounterGrassland >= 1){
-                    currentChat = 3;
+                    currentChat = 2;
                 }
             }
             let nowStuff = textStuff[currentScene][currentChat];
