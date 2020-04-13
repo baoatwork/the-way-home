@@ -1098,19 +1098,61 @@ textStuff =[
     ],
     [
         {
-            "line1": "Wow, it is such a nice place,  sort of like a wonderland!",
+            "line1": "As you continue walking, more trees show up.",
+            "line2": "Later you realize you have entered a forest.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Plants you have never seen before grow around ",
+            "line2": "shallow pools.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Light spots shine in the air. When you try to catch",
+            "line2": "them, they quickly fly away.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Wow, such a nice place... like a wonderland! This ",
+            "line2": "forest will definitely go into my journal.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "But how can I find my way out? It’s like a huge maze.",
             "line2": " ",
             "someonespeaking": true,
             "whospeaking": "Bai"
         },
         {
-            "line1": "But…how can I find my way out? It’s such a maze.",
-            "line2": " ",
-            "someonespeaking": true,
-            "whospeaking": "Bai"
+            "line1": "You get tired after circling in this forest and sit down",
+            "line2": "for rest until a voice appears behind you.",
+            "someonespeaking": false,
+            "whospeaking": " "
         },
         {
-            "line1": "Wait...what’s that?!?!",
+            "line1": "Hello?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "???"
+        },
+        {
+            "line1": "You turn around and find a lady floating in the air.",
+            "line2": "She is tiny, only about half size of a human.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "She has six pink wings on her back, and they look",
+            "line2": "like sakura petals.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Uh... Who are you?",
             "line2": " ",
             "someonespeaking": true,
             "whospeaking": "Bai"
@@ -1119,37 +1161,168 @@ textStuff =[
             "line1": "Hi, don’t panic, I am Miranda, a flower fairy. ",
             "line2": " ",
             "someonespeaking": true,
-            "whospeaking": "Flower"
+            "whospeaking": "Miranda"
         },
         {
-            "line1": " I can lead you out...but I have a little request…",
-            "line2": " ",
+            "line1": " I can lead you out of this place... but I have a ",
+            "line2": "request…",
             "someonespeaking": true,
-            "whospeaking": "Flower"
+            "whospeaking": "Miranda"
         },
         {
-            "line1": " I have 7 naughty kids and they are now trapped by",
-            "line2": "5 little ghosts. Can you save them out?",
+            "line1": " I have 7 naughty kids. They are now trapped by",
+            "line2": "5 ghosts. ",
             "someonespeaking": true,
-            "whospeaking": "Flower"
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "Flower fairies' wings would get paralyzed near ghosts.",
+            "line2": "So... could you please help me save them out?",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "You can feel the anxiety in her voice. Out of sympathy,",
+            "line2": "you decide to help her.",
+            "someonespeaking": false,
+            "whospeaking": " "
         },
         {
             "line1": "Sure, I will try my best.",
+            "line2": "But what can I do?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "I will lead you to the place where those ghosts rest.",
+            "line2": "Please take my kids back with this basket.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "Be careful and do not disturb the ghosts!",
+            "line2": "The Saint Lan will bless you.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "GAME: CATCHING FLOWER",
+            "line2": "(move mouse to “catch” flowers and avoid ghosts)",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Game is on!",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "You succcessfully took Miranda's children back.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Thank you! I don't know what to say to thank you",
+            "line2": "enough.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "I am happy to help. ",
             "line2": " ",
             "someonespeaking": true,
             "whospeaking": "Bai"
         },
         {
-            "line1": "GAME: CATCHING FLOWER",
-            "line2": "Rule: move your mouse to “catch” 7 naughty flowers and DO NOT run into those little ghosts!",
+            "line1": "Now it's time for me to fulfill my promise.",
+            "line2": "Close your eyes and the wind will lead you out.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "A wind comes and surrounds you gently.",
+            "line2": "Miranda's voice gradually fades into whisper.",
             "someonespeaking": false,
             "whospeaking": " "
         },
         {
-            "line2": " "
+            "line1": "You need to get across the Bond River... ",
+            "line2": "It's dangerous, so please take care...",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
         },
         {
+            "line1": "(Wit increased, sanity increased)",
             "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "When you open your eyes again, long-lost brigtness",
+            "line2": "fully filled your sight.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "You didn't finish the task, but got yourself hurt instead.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "My bad... I shouldn't let you do this alone... I'm a ",
+            "line2": "terrible mother.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "Please don't say that. I am not strong enough to ",
+            "line2": "help you.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "No, you are my guest. I don't know what to do to",
+            "line2": "make up for you...",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "Uh! I will still fulfill my promise and send you out.",
+            "line2": "That's the only thing I can do for you now.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "......",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Please close your eyes. And take care in the future",
+            "line2": "journey.",
+            "someonespeaking": true,
+            "whospeaking": "Miranda"
+        },
+        {
+            "line1": "A wind comes and surrounds you gently.",
+            "line2": "Miranda's voice gradually fades into whisper.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Energy decreased, sanity decreased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "When you open your eyes again, long-lost brigtness",
+            "line2": "fully filled your sight.",
+            "someonespeaking": false,
             "whospeaking": " "
         }
     ],
@@ -1526,22 +1699,40 @@ function mousePressed() {
                 }
                 
             }else if(currentScene == 7){
-                if(currentChat == 8){
+                if(currentChat == 20){
                     playFlower = true;
+                }else if(currentChat == 28){
+                    sanity = sanity + 1;
+                    knowledge ++;
+                    
+                    currentScene = 10;
+                    currentChat = 0;
+
+                    forest.stop();
+                    river.loop();
+                }else if(currentChat == 37){
+                    sanity = sanity - 2;
+                    energy = energy -1;
+                }else if(currentChat == 38){
+                    currentScene = 10;
+                    currentChat = 0;
+
+                    forest.stop();
+                    river.loop();
                 }
                 
             }else if(currentScene == 8){
                 if (currentChat == 3){
                     
                     currentScene = 7;
-                    currentChat = 0;
+                    currentChat = 1;
                     
                 }
             }else if(currentScene == 9){
                 if (currentChat == 3){
                     
                     currentScene = 7;
-                    currentChat = 0;
+                    currentChat = 1;
                     
                 }8
             }
@@ -1596,9 +1787,9 @@ function mousePressed() {
                     forest.loop();
                 }       
             }else if (currentScene == 10 || currentScene == 11 || currentScene == 12){
-                if (river.isPlaying() == true){
-                    river.stop();
-                    village.loop();
+                if (forest.isPlaying() == true){
+                    forest.stop();
+                    river.loop();
                 }  
 
             }
@@ -1742,7 +1933,7 @@ function catchingFlower(){
     player.velocity.x = (mouseX-player.position.x)*0.1;
     player.velocity.y = (mouseY-player.position.y)*0.1;
     player.overlap(coins, getCoin);
-    player.overlap(coins2,gameOver);
+    player.overlap(coins2,gameLose);
     drawSprites();
     fill(255);
     noStroke();
@@ -1750,15 +1941,22 @@ function catchingFlower(){
     textAlign(CENTER, CENTER);
     
     if (coins.length > 0) {
-        currentContent2 = "Your score:" + score;
+        if(playFlower){
+            currentContent2 = "Your score:" + score;
+        }else{
+            currentContent2 = " "; 
+        }
+        
     }
     else {
         playFlower = false;
-        currentContent1 = "You win! Sanity increased! "
-        sanity = sanity +1;
-        currentContent2 = "";
-        readyToGo = true;
-        flowerCatched=true;
+        currentChat = 20;
+        let nowStuff = textStuff[currentScene][currentChat];
+            showBody = nowStuff.someonespeaking;
+            currentChat ++;
+            whoSpeaks = nowStuff.whospeaking;
+            currentContent1 = nowStuff.line1;
+            currentContent2 = nowStuff.line2;
        
     }
 }
@@ -1768,6 +1966,18 @@ function getCoin(player, coin) {
     score += 1;
   }
 
+function gameLose(){
+    playFlower = false;
+    currentChat = 28;
+    let nowStuff = textStuff[currentScene][currentChat];
+     showBody = nowStuff.someonespeaking;
+    currentChat ++;
+    whoSpeaks = nowStuff.whospeaking;
+     currentContent1 = nowStuff.line1;
+    currentContent2 = nowStuff.line2;
+
+
+}
   function gameOver(){
     
     volcano.stop();
