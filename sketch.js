@@ -41,6 +41,7 @@ var spr;
 var anim;
 var anim2;
 let startFlower=0;
+let flowerCatched=false;
 
 
 //open world
@@ -1371,7 +1372,7 @@ function step(){
     i=1;
     while(i<=17){
     noStroke();
-    fill("white");
+    fill(106,166,164);
     quad(280+i*45,90,320+i*45,90,345+i*45,50,305+i*45,50);
     i=i+1;
     }
@@ -1542,7 +1543,7 @@ function mousePressed() {
                     currentScene = 7;
                     currentChat = 0;
                     
-                }
+                }8
             }
             
 
@@ -1593,12 +1594,14 @@ function mousePressed() {
                 if (grassland.isPlaying() == true){
                     grassland.stop();
                     forest.loop();
-                }
+                }       
+            }else if (currentScene == 10 || currentScene == 11 || currentScene == 12){
+                if (river.isPlaying() == true){
+                    river.stop();
+                    village.loop();
+                }  
 
-               
             }
-
-
             let nowStuff = textStuff[currentScene][currentChat];
             showBody = nowStuff.someonespeaking;
             currentChat ++;
@@ -1610,6 +1613,7 @@ function mousePressed() {
 
         }
     }
+
 
 
     //for the choice
@@ -1750,8 +1754,12 @@ function catchingFlower(){
     }
     else {
         playFlower = false;
-        currentContent1 = "You win!"
+        currentContent1 = "You win! Sanity increased! "
+        sanity = sanity +1;
         currentContent2 = "";
+        readyToGo = true;
+        flowerCatched=true;
+       
     }
 }
 
@@ -1761,6 +1769,7 @@ function getCoin(player, coin) {
   }
 
   function gameOver(){
+    
     volcano.stop();
     grassland.stop();
     forest.stop();
@@ -1770,7 +1779,7 @@ function getCoin(player, coin) {
     failure.loop();
     currentScene =30;
     stillPlaying = false;
-
+    
   }
 
 
