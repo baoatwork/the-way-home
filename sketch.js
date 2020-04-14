@@ -1499,6 +1499,20 @@ textStuff =[
             "someonespeaking": false,
             "whospeaking": " "
         }
+    ],
+    [
+        {
+            "line1": "Your energy and sanity could not afford the following",
+            "line2": "journey. You are exhausted.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "People from your village have never seen you again.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
     ]
 ]
 
@@ -1922,7 +1936,7 @@ function mousePressed() {
                     currentScene = 12;
                 }
             }else if(currentScene == 11){
-                if(currentChat == 1){
+                if(currentChat == 2){
                     volcano.stop();
                     grassland.stop();
                     forest.stop();
@@ -2338,8 +2352,10 @@ function restartY(){
 // check if game over
 function checkMode(){
     if (energy == 0 || sanity == 0){
-        currentScene = 11;
-        currentChat =0;
+        if (currentScene != 11){
+            currentScene = 11;
+            currentChat =0;
+        }
     }
 }
 
