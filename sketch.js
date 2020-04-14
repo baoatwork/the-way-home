@@ -19,6 +19,9 @@ let stillPlaying = true;
 //check if it's time to play the catching flower game
 let playFlower = false;
 
+//check if it's time to shout
+let playShout = false;
+
 //check if it's time to make a choice
 let makingChoice = false;
 
@@ -1379,6 +1382,134 @@ textStuff =[
             "line2": " ",
             "whospeaking": " "
         }
+    ],
+    [
+        {
+            "line1": "A wide river lies in front of you. I sparkles under ",
+            "line2": "sunshine like a bond of jewelry.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Miranda did not cheat you. You look up to the sky ",
+            "line2": "and feel your breast full of hope.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Ho! Finally there are no giant trees over me.",
+            "line2": "I miss the feeling of bathed in sunlight.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Everything here looks perfect, but to your surprise,",
+            "line2": "there is no bridge over it.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "No bridge?? How can I get across it then... I am a ",
+            "line2": "bad swimmer.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Actually, the suface of the river looks calm.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "It seems that anyone can swim across that river with",
+            "line2": "some knowledge about swimming. ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Should I try to swim across it by myself?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "To the contrary of its calm surface, the river is turbulent",
+            "line2": "under the cover. ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Unknown strange powers keep pulling you down, and",
+            "line2": "it took you great effort to swim back to the bank.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "..... Oh my god! I almost died! How could this river",
+            "line2": "actually dangerous like that?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "I need to get some help...",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "(Energy decreased, sanity decreased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "As you continue walking along the bank, your sharp",
+            "line2": "eyes spot a black dot on the river.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Thank God! That must be a boat! I am saved!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": " Bai"
+        },
+        {
+            "line1": "I have to make some noise and let that buddy hear ",
+            "line2": "me!",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "GAME: SHOUT! SHOUT! SHOUT!",
+            "line2": "(Shout as loud as you can to fill the bar.)",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Game is on!",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "It seems that your shout works. ",
+            "line2": "The boat stops for a while and then approaches.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Energy decreased, wit increased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Now you see clearly, it's a small canoe.",
+            "line2": "On the canoe stands a girl in light yellow dress.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
     ]
 ]
 // set the canvas at the center of the page
@@ -1603,7 +1734,7 @@ function mousePressed() {
 
     //For the update of the chatbox
     if (mouseX >= 200 && mouseX <= 1000 && mouseY >= 400 && mouseY <= 580){
-        if (readyToGo == false && playFlower == false && makingChoice == false){
+        if (!readyToGo && !playFlower  && !makingChoice && !playShout){
             let nowStuff = textStuff[currentScene][currentChat];
                 currentChat ++;
                 showBody = nowStuff.someonespeaking;
@@ -1734,7 +1865,24 @@ function mousePressed() {
                     currentScene = 7;
                     currentChat = 1;
                     
-                }8
+                }
+            }else if(currentScene == 10){
+                if(currentChat == 8){
+                    makingChoice = true;
+                }else if(currentChat == 13){
+
+                    energy = energy -1;
+                    sanity = sanity -1;
+                }else if(currentChat == 18){
+
+                    playShout =true;
+                }else if (currentChat == 21){
+                    energy = energy -1;
+                    knowledge ++;
+
+                    currentChat =0;
+                    currentScene = 12;
+                }
             }
             
 
@@ -1834,6 +1982,8 @@ function mousePressed() {
                 encounterGrassland ++;
             }else if(currentScene == 6){
                 currentChat = 25;
+            }else if(currentScene == 10){
+                currentChat = 13;
             }
 
             let nowStuff = textStuff[currentScene][currentChat];
@@ -1978,6 +2128,9 @@ function gameLose(){
 
 
 }
+
+
+//gameover
   function gameOver(){
     
     volcano.stop();
