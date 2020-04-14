@@ -47,6 +47,9 @@ let startFlower=0;
 let flowerCatched=false;
 
 
+//shout
+let song, analyzer;
+
 //open world
 
 let encounterVolcano =0;
@@ -1568,6 +1571,12 @@ function setup(){
     userStartAudio();
     volcano.loop();
 
+    //shout
+    song=new p5.AudioIn();
+    song.start();
+    analyzer = new p5.Amplitude();
+    analyzer.setInput(song);
+
     //catching flower
     coins = new Group();
     coins2 = new Group();
@@ -1619,6 +1628,8 @@ function draw(){
         rect(1050,450,100,100);
 
         dice();
+
+      
 
         
 
@@ -2151,6 +2162,28 @@ function gameCanvas(){
     image(myCanvas,100,100,1000,300);
 }
 
+function shout(){
+  // Get the average (root mean square) amplitude
+  let rms = analyzer.getLevel();
+  fill(127);
+  stroke(0);
+  // Draw an ellipse with size based on volume
+  a=5 + rms * 10000;
+  fill("white");
+  rect(200,200,800,100);
+
+  
+  if (a<800){
+ 
+  fill("blue")
+  rect(200, 200, a,100);
+  }else if (a>=800){
+    fill("red")
+    rect(200, 200, 800,100);
+    noloop();
+  }
+}
+
 
 
 //position of the choice buttons
@@ -2201,3 +2234,5 @@ function noAnswerSize(){
         return 80;
     }
 }
+
+
