@@ -1,6 +1,6 @@
 let currentScene=0;
 let currentChat = 0;
-let die=0;
+let die=1;
 
 
 //the game values
@@ -14,7 +14,7 @@ let currentContent2 ="";
 
 
 //check if the game is over
-let playMode = 1;
+let playMode = 2;
 
 //check if it's time to play the catching flower game
 let playFlower = false;
@@ -1531,6 +1531,7 @@ function preload(){
     grasslandbg = loadImage("resource/pic/grasslandbg.png");
 
     coordinate = loadImage("resource/pic/coordinate.png");
+    house = loadImage("resource/pic/house.png");
 
     headIcon = loadImage("resource/pic/head.png");
     bodyIcon = loadImage("resource/pic/body.png");
@@ -1562,7 +1563,7 @@ function setup(){
 
 
     userStartAudio();
-    welcome.loop();
+    volcano.loop();
 
     //shout
     song=new p5.AudioIn();
@@ -1614,13 +1615,13 @@ function draw(){
 
         threeEnergy();
         step();
-        home();
+        
 
         //coordinate of the character
         myCoordinate();
+        image(house,1100,10,100,100);
 
-        fill(250,250,250);
-        rect(1050,450,100,100);
+        
 
         dice();
 
@@ -1711,18 +1712,13 @@ function threeEnergy(){
 function step(){
     i=1;
     while(i<=17){
-    noStroke();
-    fill(106,166,164);
+    
+    fill(234,233,216,180);
     quad(280+i*45,90,320+i*45,90,345+i*45,50,305+i*45,50);
     i=i+1;
     }
 }
 
-function home(){
-
-    fill("pink");
-    rect(1120,30,70,70);
-}
 
 
 //coordinate of the character
@@ -1739,26 +1735,26 @@ function myCoordinateY(){
 }
 
 function dice(){
-    fill("white");
-    rect(1280,700,70,70);
+
+    fill(230,230,230);
+
+    rect(1050,450,100,100,20);
+
     if(die==1){
-        fill("black");
-        textSize(50);
-        text("1", 1300, 760);
+        fill(173,0,0);
+        circle(1100,500,40);
+
     }
     else if(die==2){
         fill("black");
-        textSize(50);
-        text("2", 1300, 760);
+        circle(1080,500,22);
+        circle(1120,500,22);
     }
     else if(die==3){
         fill("black");
-        textSize(50);
-        text("3", 1300, 760);
-    }else{
-        fill("black");
-        textSize(46);
-        text("Die", 1280, 760);
+        circle(1070,500,20);
+        circle(1100,500,20);
+        circle(1130,500,20);
     }
 
 }
