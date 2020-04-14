@@ -50,12 +50,15 @@ let flowerCatched=false;
 //shout
 let song, analyzer;
 
+//rabbit
+var rabbitpic;
+var rabbitgroup;
+
+
 //open world
 
 let encounterVolcano =0;
 let encounterGrassland = 0;
-
-
 let worldName = false;
 
 //the text content
@@ -1560,7 +1563,7 @@ function preload(){
     yesAnswer = loadImage("resource/pic/right.png");
     noAnswer = loadImage("resource/pic/wrong.png");
 
-//catching flower
+    //catching flower
     myHand = loadImage("resource/pic/hand.png")
     myCanvas = loadImage("resource/pic/gamecanvas.png")
     anim = loadAnimation("resource/assets/asterisk_normal0001.png",
@@ -1568,6 +1571,9 @@ function preload(){
     "resource/assets/asterisk_normal0003.png");
     anim2 = loadAnimation("resource/assets/ghost_standing0001.png",
     "resource/assets/ghost_standing0002.png","resource/assets/ghost_standing0003.png")
+
+    //rabbit
+    rabbitpic = loadAnimation("assets/rabbit.png");
 }
 
 
@@ -1607,10 +1613,32 @@ function setup(){
     player = createSprite(600, 600, 10, 10);
     player.addImage("default",myHand);
 
+
+
+
+    //rabbit
+    rabbit=new Group();
+    for (var i = 0; i < 10; i++) {
+        var r = createSprite(random(100, width-100),random(100, height-100),10, 10);
+        r.addAnimation("default",rabbitpic);
+        rabbit.add(r);
+    }  
+
+    //rabbit player
+    rabbitplayer = createSprite(
+    0, height/2, 40, 40);
+    rabbitplayer.shapeColor = color(100,100,200);
+
+    //rabbit home
+    rabbitFinal = createSprite(
+    1100, 100, 60, 60);
+    rabbitFinal.shapeColor = color("pink");
+
 }
 
 function draw(){
-    
+
+
 
     if (playMode == 2){
         
@@ -2367,3 +2395,58 @@ function mouseInRect(a,b,c,d){
         return false;
     }
 }
+
+
+//rabbit game
+function keyPressed(){
+    if (keyCode == RIGHT_ARROW) {
+        rabbitplayer.setSpeed(3.0, 0);
+      }
+      else if (keyCode == DOWN_ARROW) {
+        rabbitplayer.setSpeed(3.0, 90);
+      }
+      else if (keyCode == LEFT_ARROW) {
+        rabbitplayer.setSpeed(1.5, 180);
+      }
+      else if (keyCode == UP_ARROW) {
+        rabbitplayer.setSpeed(3.0, 270);
+      }
+      else if (key == ' ') {
+        rabbitplayer.setSpeed(0, 0);
+      }
+      return false;
+}
+
+function playRabbit(){
+    for (var i = 0; i < rabbit.length; i++) {
+        rabbit[i].position.y += rabbit[i].height * 0.015;
+    if (rabbit[i].position.y > height) {
+        rabbit[i].position.y = 0;
+    }
+  }
+
+  rabbitplayer.overlap(rabbit,rabbitGameOver);
+  rabbitplayer.overlap(rabbitFinal,rabbitGameWin);
+
+  drawSprites();
+}
+
+//rabbit game over
+function rabbitGameOver(){
+    noStroke();
+    textSize(72);
+    textAlign(CENTER, CENTER);
+    fill("red");
+    text("GAME OVER",width/2, height/2);
+    noLoop();
+  }
+  
+//rabbit win
+function rabbitGameWin(){
+    noStroke();
+    textSize(72);
+    textAlign(CENTER, CENTER);
+    fill("pink");
+    text("You win",width/2, height/2);
+    noLoop();
+  }
