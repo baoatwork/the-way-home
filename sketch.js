@@ -385,8 +385,8 @@ function mousePressed() {
 
     //For the update of the chatbox
     if (mouseX >= 200 && mouseX <= 1000 && mouseY >= 400 && mouseY <= 580){
-        if (!readyToGo && !playFlower  && !makingChoice && !playShout && !playRabbit){
-            turnPage.play();
+        if (!readyToGo && !playFlower  && !makingChoice && !playShout && !playRabbit && playMode == 2){
+            turnPage.play(0,1,0.6);
             checkMode();
             let nowStuff = textStuff[currentScene][currentChat];
                 currentChat ++;
@@ -569,7 +569,7 @@ function mousePressed() {
                     currentScene =16;
                 }else if(currentChat == 17){
                     energy = energy -1;
-                    sanity = sanity -1;
+                    sanity = sanity -2;
                 }else if(currentChat == 19){
                     currentChat =0;
                     currentScene =16;
@@ -600,7 +600,7 @@ function mousePressed() {
             if (currentScene != 12){
                 var randomValue = random();
                 if (currentScene < 16){
-                    diceSound.play();
+                    diceSound.play(0,1,1.2);
                         if(randomValue < 0.3333){
                         die=1;
                         currentScene=currentScene+1;
@@ -620,7 +620,7 @@ function mousePressed() {
                 }
 
             }else{
-                diceSound.play();
+                diceSound.play(0,1,1.2);
                 die =3;
                 currentScene =currentScene +3;
             }
@@ -673,7 +673,7 @@ function mousePressed() {
     if (mouseX>= 450 && mouseX <= 530 && mouseY >= 300 && mouseY <= 380){
 
         if (makingChoice == true){
-            buttonSound.play();
+            buttonSound.play(0,1,1.5);
 
             let nowStuff = textStuff[currentScene][currentChat];
             showBody = nowStuff.someonespeaking;
@@ -690,7 +690,7 @@ function mousePressed() {
     
     if(mouseX>= 650 && mouseX <= 730 && mouseY >= 300 && mouseY <= 380){
         if (makingChoice == true){
-            buttonSound.play();
+            buttonSound.play(0,1,1.5);
             if (currentScene == 4){
                 currentChat = 31;
                 readyToGo = true;
@@ -719,7 +719,7 @@ function mousePressed() {
     if(mouseInRect(110,320,240,290)){
 
         if (playMode == 1){
-            buttonSound.play();
+            buttonSound.play(0,1,1.5);
             playMode =2;
 
             welcome.stop();
@@ -730,7 +730,7 @@ function mousePressed() {
 
     if(mouseInRect(870,1080,240,290)){
         if (playMode == 1){
-            buttonSound.play();
+            buttonSound.play(0,1,1.5);
             window.open("https://github.com/baoatwork/the-way-home");
         }
         
@@ -738,6 +738,7 @@ function mousePressed() {
 
     if (mouseInRect(1000,1080,50,130)){
         if(playMode == 3){
+            buttonSound.play(0,1,1.5);
             location.reload();
         }
     }
