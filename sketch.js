@@ -1706,11 +1706,11 @@ function threeEnergy(){
 
 
 
-    fill("pink");
+    fill(0,150,120);
     rect(165,24,energy * 15,15);
-    fill("blue");
+    fill(0,98,132);
     rect(165,54,knowledge * 15,15);
-    fill("red");
+    fill(181,73,91);
     rect(165,84,sanity * 15,15);
 }
 
