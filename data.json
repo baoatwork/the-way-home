@@ -1438,5 +1438,496 @@
             "someonespeaking": false,
             "whospeaking": " "
         }
+    ],
+    [
+        {
+            "line1": "Your energy and sanity could not support you with",
+            "line2": "the following journey. You are exhausted.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "People from your village have never seen you again.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "In just a few minutes the boat is right in front of you.",
+            "line2": "The girl on the boat is smiling at you.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Hi, do you need any help?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "Yeah...sorry to trouble you... I wanna get accross this",
+            "line2": "river and go home... Could you give me a ride?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Oh, no need to worry! Get on my boat and I will",
+            "line2": "take you over to the other side fast and safe.",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "You step on the boat carefully and dare not to look",
+            "line2": "down.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Do you... fear water?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "Well... you know... Ya... a little bit...",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Haha, don't be shy. I know a way that may help you ",
+            "line2": "with this.",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "The Saint Lan said the best way to overcome fear is ",
+            "line2": "to face it bravely.",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "If I say I can help you become an excellent swimmer,",
+            "line2": "do you want to have a try?",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "Uh... Should I accept her suggestion?",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Great! You are a brave guy. Well, actually I could not",
+            "line2": "make you a good swimmer immediately.",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "But I know how to fuel your body! I think energy would",
+            "line2": "be a necessity for you in the process!",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "Tell you a secret, this river is blessed by gods and ",
+            "line2": "has magical power.",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "Grab some water and pray before you drink it, and it",
+            "line2": "will give you energy.",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "Thank you! It's true that life is full of magic.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You take your courage and bend down. Water is in",
+            "line2": "your hand and you close you eyes.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Hope I can get back home soon...",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "The water in your hand seems to feel your wish, as",
+            "line2": "it begin to shine.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "! ! !",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You did it! Drink it now!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "You toss off the water and get an amazing feeling.",
+            "line2": "All your exhaution before is sweppt away.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Energy increased, wit increased) ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "After landing, you said goodbye to the girl. You can ",
+            "line2": "feel that you are now back to your world.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "The terminal is not far away, and it's not time for rest.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Throw the dice to move)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Alright. I got it. Just in a while and we will reach land.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "The girl"
+        },
+        {
+            "line1": "After landing, you said goodbye to the girl. You can ",
+            "line2": "feel that you are now back to your world.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "The terminal is not far away, and it's not time for rest.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Throw the dice to move)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "Nothing happens here.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "Legend will continue.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
+    ],
+    [
+        {
+            "line1": "As you move forward, the surronding scenery becomes",
+            "line2": "more and more familiar.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Finally! This is the world I belong to.",
+            "line2": "Even seeing a road is now my genuine happiness.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "I have left home for a long time. I miss my friends",
+            "line2": "and my little house.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "To your surprise, your village is not far from the river.",
+            "line2": "After climbing up another hill, it is now in your sight.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "There it is! ",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "SUDDENLY! Rabbits! A bunch of rabbits appear on",
+            "line2": "the ground and begin rushing towards you.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Apart from water, rabbit is another thing in this world",
+            "line2": "that you cannot coexist with.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "OMG! I hate them!",
+            "line2": "Where do these crazy freaky rabbits come from?!",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "GAME: ESCAPE FROM RABBITS",
+            "line2": "(Use arrow keys to control, avoid rabbits and go home)",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Game is on!",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Rabbits are so creepy!!! ",
+            "line2": "Luckily, I am swift enough.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "(Wit increased, energy decreased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Now your village is right in front of you.",
+            "line2": "Everything looks so familiar and lovely.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "I am back!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "...... I really do hate rabbits.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You fled in panic but still got hit by rabbits.",
+            "line2": "Your hair is in disorder and face is flushed.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(Energy decreased, sanity decreased)",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Now your village is right in front of you.",
+            "line2": "Everything looks so familiar and lovely.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "I am back!",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        }
+    ],
+    [
+        {
+            "line1": "Hey! Bai! Long time no see! Where have you been",
+            "line2": "these days?",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "Your friend Chan recognizes you as soon as you ",
+            "line2": "walk past his house.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "As you are about to answer Chan's question, your",
+            "line2": "head suddenly starts to spin dizzily.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "The world gets dark and you fall in a faint.",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Bai? ! Bai! !",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "... ...",
+            "line2": " ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "When you wake up again, you realize you are lying",
+            "line2": "on your own bed inside your house.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "You are awake! Thank god! Doctor Leon came and ",
+            "line2": "said you are fine...",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "But are you Ok? We all worry about you. What ",
+            "line2": "happened when you are not in the village?",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "What happened... Uh... I can't think of anything...",
+            "line2": "Why... ?",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Strangely, your memories are scattered in pieces.",
+            "line2": "Your experience becomes just a blur.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "It seems that you have been an amazing place, but",
+            "line2": "you just cannot remember anything about it.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Don't push yourself too hard! It's okay if you can't",
+            "line2": "remember it now.",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "You need to take a good rest now. When you feel",
+            "line2": "better, we can go to the Khotish City together.",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "Welcome back, Bai.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Chan"
+        },
+        {
+            "line1": "Yeah, you are right. Thank you, Chan.",
+            "line2": " ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "Although it's a pity that you can't add new things to",
+            "line2": "your travel journal, life still goes on.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "That forgotten memory is just like a dream.",
+            "line2": "A far-away fantastic dream.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(THE END  --  Level Grade: B)",
+            "line2": "(Throw the dice to restart the game)",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Hi! Chan! You are not gonna believe what I have been",
+            "line2": "through! Let me tell you an unbelievable story... ",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You shared your experiece with Chan excitedly.",
+            "line2": "Chan is amazed by your story but also doubt it. ",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Haha! What I said is all true! Anyway, I am gonna go",
+            "line2": "home and record all these things.",
+            "someonespeaking": true,
+            "whospeaking": "Bai"
+        },
+        {
+            "line1": "You quickly enter your house and started writing",
+            "line2": "immediately.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Experice like this is precious and rare, so you carefully",
+            "line2": "put down words hoping to include everything.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "Yet what you don't know is, in the near future, you",
+            "line2": "are going back to that world again.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "By that time, you will become a hero to that world",
+            "line2": "too. But that is whole another story for later.",
+            "someonespeaking": false,
+            "whospeaking": " "
+        },
+        {
+            "line1": "(THE END  --  Level Grade: A)",
+            "line2": "(Throw the dice to restart the game)",
+            "someonespeaking": false,
+            "whospeaking": " "
+        }
     ]
 ]
