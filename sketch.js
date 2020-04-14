@@ -14,7 +14,7 @@ let currentContent2 ="";
 
 
 //check if the game is over
-let playMode = 2;
+let playMode = 1;
 
 //check if it's time to play the catching flower game
 let playFlower = false;
@@ -1502,8 +1502,8 @@ textStuff =[
     ],
     [
         {
-            "line1": "Your energy and sanity could not afford the following",
-            "line2": "journey. You are exhausted.",
+            "line1": "Your energy and sanity could not support you with",
+            "line2": "the following journey. You are exhausted.",
             "someonespeaking": false,
             "whospeaking": " "
         },
@@ -1580,7 +1580,7 @@ function setup(){
 
 
     userStartAudio();
-    volcano.loop();
+    welcome.loop();
 
     //shout
     song=new p5.AudioIn();
