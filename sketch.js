@@ -1516,6 +1516,9 @@ function preload(){
     welcomeBai = loadImage("resource/pic/welcomebai.png");
     buttonBg = loadImage("resource/pic/buttonbg.png");
 
+    //gameover page
+    restart = loadImage("resource/pic/restart.png");
+
     forest = loadSound("resource/sound/forest.mp3");
     river = loadSound("resource/sound/river.mp3");
     village = loadSound("resource/sound/village.mp3");
@@ -1593,7 +1596,7 @@ function setup(){
 }
 
 function draw(){
-    checkMode();
+    
 
     if (playMode == 2){
         
@@ -1619,7 +1622,7 @@ function draw(){
 
         //coordinate of the character
         myCoordinate();
-        image(house,1100,10,100,100);
+        image(house,1100,5,100,100);
 
         
 
@@ -1657,6 +1660,8 @@ function draw(){
         textAlign(CENTER, CENTER);
         fill("red");
         text("GAME OVER",width/2, height/2);
+
+        image(restart,restartX(),restartY(),restartSize(),restartSize());
 
     }else if (playMode == 1){
         //welcome page
@@ -1767,6 +1772,7 @@ function mousePressed() {
     //For the update of the chatbox
     if (mouseX >= 200 && mouseX <= 1000 && mouseY >= 400 && mouseY <= 580){
         if (!readyToGo && !playFlower  && !makingChoice && !playShout){
+            checkMode();
             let nowStuff = textStuff[currentScene][currentChat];
                 currentChat ++;
                 showBody = nowStuff.someonespeaking;
@@ -1915,6 +1921,17 @@ function mousePressed() {
                     currentChat =0;
                     currentScene = 12;
                 }
+            }else if(currentScene == 11){
+                if(currentChat == 1){
+                    volcano.stop();
+                    grassland.stop();
+                    forest.stop();
+                    river.stop();
+                    village.stop();
+
+                    failure.loop();
+                    playMode =3;
+                }
             }
             
 
@@ -2048,6 +2065,11 @@ function mousePressed() {
         
     }
 
+    if (mouseInRect(1000,1080,50,130)){
+        if(playMode == 3){
+            location.reload();
+        }
+    }
 
   }
 
@@ -2056,10 +2078,6 @@ function mousePressed() {
 
 
 
-//background music
-function myBgm(){
-    return river;
-}
 
 //background picture
 function myBg(){
@@ -2179,22 +2197,6 @@ function gameLose(){
 }
 
 
-//gameover
-  function gameOver(){
-    
-    volcano.stop();
-    grassland.stop();
-    forest.stop();
-    river.stop();
-    village.stop();
-
-    failure.loop();
-    currentScene =30;
-    stillPlaying = false;
-    
-  }
-
-
   //canvas for the game
 function gameCanvas(){
     image(myCanvas,100,100,1000,300);
@@ -2208,7 +2210,7 @@ function shout(){
   
   
   // Draw an ellipse with size based on volume
-  let a=5 + rms * 1600;
+  let a=5 + rms * 1500;
   console.log(rms);
   
   fill("white");
@@ -2308,10 +2310,36 @@ function buttonT2(){
 }
 
 
+//the restart button
+function restartSize(){
+    if(mouseInRect(1000,1080,50,130)){
+        return 100;
+    }else{
+        return 80;
+    }
+}
+
+function restartX(){
+    if (mouseInRect(1000,1080,50,130)){
+        return 990;
+    }else{
+        return 1000;
+    }
+}
+
+function restartY(){
+    if (mouseInRect(1000,1080,50,130)){
+        return 40;
+    }else{
+        return 50;
+    }
+}
+
 // check if game over
 function checkMode(){
     if (energy == 0 || sanity == 0){
-        playMode = 3;
+        currentScene = 11;
+        currentChat =0;
     }
 }
 
