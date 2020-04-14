@@ -1707,11 +1707,11 @@ function threeEnergy(){
 
 
     fill(0,150,120);
-    rect(165,24,energy * 15,15);
+    rect(165,24,energy * 15,15,2);
     fill(0,98,132);
-    rect(165,54,knowledge * 15,15);
+    rect(165,54,knowledge * 15,15,2);
     fill(181,73,91);
-    rect(165,84,sanity * 15,15);
+    rect(165,84,sanity * 15,15,2);
 }
 
 function step(){
