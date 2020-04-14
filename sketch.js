@@ -14,7 +14,7 @@ let currentContent2 ="";
 
 
 //check if the game is over
-let playMode = 2;
+let playMode = 1;
 
 //check if it's time to play the catching flower game
 let playFlower = false;
@@ -1511,6 +1511,11 @@ function centerCanvas(){
 }
 
 function preload(){
+    //welcome page
+    welcome = loadSound("resource/sound/welcome.mp3");
+    welcomeBai = loadImage("resource/pic/welcomebai.png");
+    buttonBg = loadImage("resource/pic/buttonbg.png");
+
     forest = loadSound("resource/sound/forest.mp3");
     river = loadSound("resource/sound/river.mp3");
     village = loadSound("resource/sound/village.mp3");
@@ -1557,7 +1562,7 @@ function setup(){
 
 
     userStartAudio();
-    volcano.loop();
+    welcome.loop();
 
     //shout
     song=new p5.AudioIn();
@@ -1653,6 +1658,29 @@ function draw(){
         text("GAME OVER",width/2, height/2);
 
     }else if (playMode == 1){
+        //welcome page
+        background(255);
+
+        push();
+        translate(600,220);
+        rotate(frameCount * PI /540);
+        image(welcomeBai,-180,-180,360,360);
+        pop();
+
+        tint(255,buttonT1());
+        image(buttonBg,20,175,360,180);
+        tint(255,buttonT2());
+        image(buttonBg,790,175,360,180);
+
+
+        textSize(40);
+        textFont(chatFont);
+        text("Start Game",110,270);
+        text("More Info",880,270);
+
+        textSize(60);
+        textFont(nameFont);
+        text("The Way Home",400,520);
 
     }
 
@@ -2007,6 +2035,23 @@ function mousePressed() {
     }
     
 
+    if(mouseInRect(110,320,240,290)){
+        if (playMode == 1){
+            playMode =2;
+
+            welcome.stop();
+            volcano.loop();
+        }
+        
+    }
+
+    if(mouseInRect(870,1080,240,290)){
+        if (playMode == 1){
+            window.open("https://github.com/baoatwork/the-way-home");
+        }
+        
+    }
+
 
   }
 
@@ -2249,9 +2294,36 @@ function noAnswerSize(){
     }
 }
 
+//return the opacity of the buttons on the welcome page
+function buttonT1(){
+    if(mouseInRect(110,320,240,290)){
+        return 255;
+    }else{
+        return 0;
+    }
+}
+
+function buttonT2(){
+    if(mouseInRect(870,1080,240,290)){
+        return 255;
+    }else{
+        return 0;
+    }
+}
+
+
 // check if game over
 function checkMode(){
     if (energy == 0 || sanity == 0){
         playMode = 3;
+    }
+}
+
+//check if mouse in Rect
+function mouseInRect(a,b,c,d){
+    if(mouseX >= a && mouseX <= b && mouseY >= c && mouseY <= d){
+        return true;
+    }else{
+        return false;
     }
 }
