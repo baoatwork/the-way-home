@@ -1,6 +1,6 @@
 # The Way Home
 
-### Description
+#### Description
     The way home is a web-based interactive board game. In this game, players would play a character who was sent to an unknown world by accident and try to find the way home. The main goal for the player is to throw dice to move to different blocks and interact with upcoming events before reaching the terminal. This project presents multiple interactive methods including choices, mouse click, key press and more to lead players to diverse storylines and ends. In the process of the adventure, players would get to know more about this strange world and the character. 
 
 ## Creaters
