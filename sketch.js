@@ -165,7 +165,7 @@ function setup(){
       c.addAnimation("default",anim);
       coins.add(c);
     }
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 5; i++) {
       var d = createSprite(random(250, 950),random(170, 350),10, 10);
       //c.shapeColor = color(255, 255, 0);
       d.addAnimation("default",anim2);
@@ -889,7 +889,7 @@ function shout(){
   
   
   // Draw an ellipse with size based on volume
-  let a=5 + rms * 1500;
+  let a=5 + rms * 1300;
   console.log(rms);
   
   fill("white");
