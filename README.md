@@ -14,7 +14,7 @@
 ## Artist Statement
 
 ## Guide
-
+![Image 2](screenshots/guide.jpg)
 
 ## Ciations
    #### -For Code-
