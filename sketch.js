@@ -102,11 +102,11 @@ function preload() {
     failure = loadSound("resource/sound/gameover.mp3");
 
 
-    forestbg = loadImage("resource/pic/forestbg.png");
-    villagebg = loadImage("resource/pic/villagebg.png");
-    riverbg = loadImage("resource/pic/riverbg.png");
-    volcanobg = loadImage("resource/pic/volcanobg.png");
-    grasslandbg = loadImage("resource/pic/grasslandbg.png");
+    forestbg = loadImage("resource/pic/forestbg.jpg");
+    villagebg = loadImage("resource/pic/villagebg.jpg");
+    riverbg = loadImage("resource/pic/riverbg.jpg");
+    volcanobg = loadImage("resource/pic/volcanobg.jpg");
+    grasslandbg = loadImage("resource/pic/grasslandbg.jpg");
 
     coordinate = loadImage("resource/pic/coordinate.png");
     house = loadImage("resource/pic/house.png");
