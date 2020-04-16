@@ -1,4 +1,5 @@
 # The Way Home
+![Image 1](screenshots/welcomepage.png)
 
 ## Description
    The way home is a web-based interactive board game. In this game, players would play a character who was sent to an unknown world by accident and try to find the way home. The main goal for the player is to throw dice to move to different blocks and interact with upcoming events before reaching the terminal. This project presents multiple interactive methods including choices, mouse click, key press and more to lead players to diverse storylines and ends. In the process of the adventure, players would get to know more about this strange world and the character.
@@ -13,6 +14,7 @@
 ## Artist Statement
 
 ## Guide
+![Image 2](screenshots/guide.jpg)
 
 ## Ciations
    #### -For Code-
@@ -33,6 +35,9 @@
    The Game Over page Bgm: 归去谣 from Moonlight Blade
 
 ## Screenshots
+![Image 3](screenshots/example1.jpg)
+
+![Image 4](screenshots/example2.jpg)
 
 ## Update History
    4.15: The first complete version
